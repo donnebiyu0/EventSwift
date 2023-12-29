@@ -1,0 +1,41 @@
+import { Button } from "@/components/ui/button";
+import Image from "next/image";
+import Link from "next/link";
+
+export default function Home() {
+  return (
+    <>
+      <section className="bg-primary-50 bg-dotted-pattern bg-contain py-5 px-3 md:py-10">
+        <div className="wrapper grid grid-cols-1 gap-5 md:grid-cols-2 2xl:gap-0">
+          <div className="flex flex-col justify-center gap-8">
+            <h1 className="h1-bold">
+              Event Excellence Redefined: Dive into Seamless Success!
+            </h1>
+            <p className="p-regular-20 md:p-regular-24">
+              Elevate events with precision and euphoria. We're your dynamic
+              partners for seamless success. Let's craft epic moments together!
+            </p>
+            <Button asChild size="lg" className="button w-full sm:w-fit">
+              <Link href="#events">Explore Now</Link>
+            </Button>
+          </div>
+          <Image
+            src="/assets/images/hero.png"
+            alt="hero"
+            width={1000}
+            height={1000}
+            className="max-h-[700vh] object-contain object-center 2xl:max-h-[500vh]"
+          />
+        </div>
+      </section>
+      <section id="events">
+        <h2 className="h2-bold">
+          Trusted by <br /> Thousends of events
+        </h2>
+        <div className="flex flex-col w-full gap-5 md:flex-row">
+          search and catigory filter
+        </div>
+      </section>
+    </>
+  );
+}
