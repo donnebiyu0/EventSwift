@@ -25,7 +25,7 @@ const EventSchema = new Schema({
   startDate: { type: Date, default: Date.now },
   endDate: { type: Date, default: Date.now },
   price: { type: String },
-  isFree: { type: String, default: false },
+  isFree: { type: Boolean, default: false },
   url: { type: String },
   category: { type: Schema.Types.ObjectId, ref: "Category" },
   organizer: { type: Schema.Types.ObjectId, ref: "User" },
